@@ -1,0 +1,13 @@
+.company-details-contact {
+  background-color: white;
+  height: 50px;
+  width: 350px;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
+.company-details-contact fa {
+  margin-right: 10px;
+  color: #00A0ED;
+}

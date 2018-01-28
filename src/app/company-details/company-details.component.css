@@ -1,0 +1,116 @@
+.green {
+  background-color: green;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.red {
+  background-color: red;
+}
+
+h2 {
+  margin-top: 0px;
+}
+
+.company-details {
+  width: 100%;
+}
+
+.company-details-main {
+  margin-top: 10px;
+  display: flex;
+  width: 100%;
+}
+
+.company-details-main > div {
+  width: 100%;
+  display: flex;
+}
+
+.company-details-no-company {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+.company-details-header {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid #2D2F3C;
+}
+
+.company-details-info {
+  display: flex;
+  width: 100%;
+}
+
+.company-details-info > div {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.company-details-info label {
+  font-size: 0.9em;
+  width: 150px;
+}
+
+.company-details-contacts {
+  width: 100%;
+  display: flex;
+}
+
+.company-details-contacts > div > div {
+  margin-bottom: 10px;
+}
+
+.company-details-contacts fa {
+  color: #00A0ED;
+}
+
+.company-details-contact-detail > div {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.company-details-contact-detail > div label {
+  width: 150px;
+}
+
+.company-details-buttons {
+  display: block;
+  margin-top: 10px;
+}
+
+.contact-form > div {
+  display: flex;
+}
+
+input {
+  margin: 5px 0px;
+  border-radius: 0px;
+  height: 35px;
+  width: 250px;
+  font-size: 1.5em;
+}
+
+input:focus {
+  outline-color: #00A0ED;
+  outline-width: thin;
+}
+
+button {
+  margin-right: 5px;
+  width: 100px;
+  height: 35px;
+  background-color: #00A0ED;
+  color: white;
+}

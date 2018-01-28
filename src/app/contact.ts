@@ -1,0 +1,20 @@
+export class Contact {
+  ContactAddress:string;
+  ContactCity:string;
+  ContactId:number;
+  ContactState:string;
+  ContactZip:string;
+  Contactaddress2:string;
+  HomePhone:string;
+  LastName:string;
+  MobilePhone:string;
+  PrimaryPhone:string;
+  birthday:string;
+  dept:string;
+  email:string;
+  email2:string;
+  ext:string;
+  fax:string;
+  firstname:string;
+  title:string;
+};

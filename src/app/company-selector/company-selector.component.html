@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="company-selector">
+    <app-company-selector-options (onUserSearch)="search($event)"></app-company-selector-options>
+    <div *ngIf="filteredCompanies && filteredCompanies.length">
+      <div class="company-selector-items">
+        <div *ngFor="let company of filteredCompanies.slice(0,10)">
+          <app-company-selector-item (onSelectCompany)="onSelectedCompanyChange($event)" [company]="company"></app-company-selector-item>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

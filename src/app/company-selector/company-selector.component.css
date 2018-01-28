@@ -1,0 +1,10 @@
+.company-selector {
+  width: 100%;
+}
+
+.company-selector-items {
+  margin-top: 10px;
+  height: 350px;
+  overflow: scroll;
+  scroll-behavior: smooth;
+}

@@ -1,0 +1,14 @@
+<div class="company-selector-item" (click)="selectCompany(company)">
+  <div class="company-selector-item-name">
+    <fa [name]="'building'" [size]="2"></fa>
+    <div>
+      {{ company.CompanyName }}
+    </div>
+  </div>
+  <div class="company-selector-item-state">
+    {{ company.State  }}
+  </div>
+  <div class="company-selector-item-contact">
+    {{ company.Contacts.length  }} contacts
+  </div>
+</div>

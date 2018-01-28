@@ -1,0 +1,113 @@
+<div class="container">
+  <div class="company-details">
+    <div class="company-details-header">
+      <h3>MANAGE</h3>
+    </div>
+    <div class="company-details-main">
+      <div *ngIf="company; else noCompanyTemplate">
+        <div *ngIf="!selectedContact; else contactFormTemplate">
+          <h2>Company Details</h2>
+          <div class="company-details-info">
+            <div>
+              <label>Company Name
+                <input type="text" [(ngModel)]="companyClone.CompanyName">
+              </label>
+              <label>Street Address
+                <input type="text" [(ngModel)]="companyClone.StreetAddress">
+              </label>
+              <label>City
+                <input type="text" [(ngModel)]="companyClone.City">
+              </label>
+            </div>
+            <div>
+              <label>State
+                <input type="text" [(ngModel)]="companyClone.State">
+              </label>
+              <label>Zipcode
+                <input type="text" [(ngModel)]="companyClone.ZipCode">
+              </label>
+            </div>
+          </div>
+
+          <div class="company-details-buttons">
+            <button class="green" (click)="update()">Save</button>
+            <button class="yellow" (click)="cancel()">Cancel</button>
+            <button class="red" (click)="delete()">Delete</button>
+          </div>
+
+        </div>
+
+
+        <div class="company-details-contacts">
+            <div *ngIf="companyClone.Contacts && companyClone.Contacts.length">
+              <h2>Contact List</h2>
+              <div *ngFor="let contact of companyClone.Contacts">
+                <app-company-details-contact (click)="selectContact(contact)" [contact]="contact"></app-company-details-contact>
+              </div>
+            </div>
+            <fa (click)="newContact()" [name]="'plus-circle'" [size]="2"></fa>
+        </div>
+
+        <ng-template #contactFormTemplate>
+
+          <div class="contact-form">
+
+            <h2>Contact Details</h2>
+
+            <div class="company-details-contact-detail">
+
+              <div>
+                <label>Title
+                  <input type="text" [(ngModel)]="selectedContact.title">
+                </label>
+                <label>First Name
+                  <input type="text" [(ngModel)]="selectedContact.firstname">
+                </label>
+                <label>Last Name
+                  <input type="text" [(ngModel)]="selectedContact.LastName">
+                </label>
+                <label>Street Address
+                  <input type="text" [(ngModel)]="selectedContact.ContactAddress">
+                </label>
+              </div>
+
+              <div>
+                <label>City
+                  <input type="text" [(ngModel)]="selectedContact.ContactCity">
+                </label>
+                <label>State
+                  <input type="text" [(ngModel)]="selectedContact.ContactState">
+                </label>
+                <label>Zip
+                  <input type="text" [(ngModel)]="selectedContact.ContactZip">
+                </label>
+                <label>Phone Number
+                  <input type="text" [(ngModel)]="selectedContact.PrimaryPhone">
+                </label>
+              </div>
+
+            </div>
+
+            <div class="company-details-buttons">
+              <button class="green" (click)="updateContact()">Save</button>
+              <button class="yellow" (click)="clearSelectedContact()">Cancel</button>
+              <button *ngIf="selectedContact.ContactId" class="red" (click)="deleteContact()">Delete</button>
+            </div>
+
+          </div>
+
+
+
+        </ng-template>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #noCompanyTemplate>
+  <div class="company-details-no-company">
+    <p>No company selected</p>
+  </div>
+</ng-template>
