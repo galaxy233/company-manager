@@ -1,7 +1,7 @@
 import { Contact } from './contact';
 
 export class Company {
-  id: number;
+  .CompanyID: number;
   AccountId: string;
   City: string;
   CompanyName: string;

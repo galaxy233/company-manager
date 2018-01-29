@@ -6,7 +6,7 @@
         <div *ngFor="let company of filteredCompanies">
           <app-company-selector-item
             (onSelectCompany)="onSelectedCompanyChange($event)"
-            [selected]="selectedCompany ? selectedCompany.id === company.id : false"
+            [selected]="selectedCompany ? selectedCompany.CompanyID === company.CompanyID : false"
             [company]="company">
           </app-company-selector-item>
         </div>
