@@ -40,6 +40,8 @@ export class CompanyDetailsComponent implements OnChanges, OnInit {
       })
       this.companyClone.Contacts.splice(contactIdx, 1, this.selectedContact);
     } else {
+      let lastId = Math.max.apply(null, this.companyClone.Contacts.map(c => Number(c.ContactId)))
+      this.selectedContact.ContactId = lastId + 1;
       this.companyClone.Contacts.push(this.selectedContact);
     }
 
@@ -72,6 +74,7 @@ export class CompanyDetailsComponent implements OnChanges, OnInit {
     this.telenotesService.updateRecord(this.companyClone)
       .subscribe(data => {
         this.onUpdateRecord.emit();
+        this.clearSelectedContact();
       })
   }
 

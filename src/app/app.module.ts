@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ChartModule } from 'angular2-chartjs';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { Angular2FontawesomeModule } from 'angular2-fontawesome/angular2-fontawesome';
@@ -21,7 +20,6 @@ import { CompanyDetailsContactComponent } from './company-details/company-detail
 @NgModule({
   declarations: [
     AppComponent,
-    NumberBoxComponent,
     CompanySelectorComponent,
     CompanySelectorOptionsComponent,
     CompanySelectorItemComponent,
@@ -31,7 +29,6 @@ import { CompanyDetailsContactComponent } from './company-details/company-detail
   imports: [
     FormsModule,
     BrowserModule,
-    ChartModule,
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }

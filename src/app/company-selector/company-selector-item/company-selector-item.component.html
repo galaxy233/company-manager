@@ -1,4 +1,4 @@
-<div class="company-selector-item" (click)="selectCompany(company)">
+<div class="company-selector-item" [ngClass]="{'selected':selected}" (click)="selectCompany(company)">
   <div class="company-selector-item-name">
     <fa [name]="'building'" [size]="2"></fa>
     <div>

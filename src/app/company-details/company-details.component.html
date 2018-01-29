@@ -42,7 +42,7 @@
             <div *ngIf="companyClone.Contacts && companyClone.Contacts.length">
               <h2>Contact List</h2>
               <div *ngFor="let contact of companyClone.Contacts">
-                <app-company-details-contact (click)="selectContact(contact)" [contact]="contact"></app-company-details-contact>
+                <app-company-details-contact [selected]="selectedContact ? selectedContact.ContactId === contact.ContactId : false" (click)="selectContact(contact)" [contact]="contact"></app-company-details-contact>
               </div>
             </div>
             <fa (click)="newContact()" [name]="'plus-circle'" [size]="2"></fa>

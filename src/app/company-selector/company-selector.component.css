@@ -8,3 +8,11 @@
   overflow: scroll;
   scroll-behavior: smooth;
 }
+
+.company-selector-no-results {
+  margin-top: 10px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

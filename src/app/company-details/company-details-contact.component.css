@@ -5,9 +5,31 @@
   display: flex;
   align-items: center;
   padding: 5px;
+  transition: 0.2s all ease;
+  box-sizing: border-box;
 }
 
-.company-details-contact fa {
+.company-details-contact:hover {
+  cursor: pointer;
+  background-color: #00A0ED;
+  color: white;
+  border: 1px solid #2D2F3C;
+}
+
+.company-details-contact:hover fa {
+  color: white;
+}
+
+.selected {
+  background-color: #00A0ED;
+  color: white;
+  border: 1px solid #2D2F3C;
+}
+
+fa {
   margin-right: 10px;
+}
+
+.unselected fa {
   color: #00A0ED;
 }

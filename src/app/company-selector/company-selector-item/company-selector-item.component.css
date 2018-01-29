@@ -8,6 +8,28 @@
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
+  transition: 0.1s all ease;
+}
+
+.company-selector-item:hover {
+  cursor: pointer;
+  background-color: #00A0ED;
+  color: white;
+  border: 1px solid #2D2F3C;
+}
+
+.company-selector-item:hover fa {
+  color: white;
+}
+
+.selected {
+  background-color: #00A0ED;
+  color: white;
+  border: 1px solid #2D2F3C;
+}
+
+.selected .company-selector-item-name fa {
+  color: white;
 }
 
 .company-selector-item-name {

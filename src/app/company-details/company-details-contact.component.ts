@@ -9,6 +9,7 @@ import { Contact } from '../contact';
 export class CompanyDetailsContactComponent implements OnInit {
 
   @Input() contact: Contact;
+  @Input() selected: boolean; 
 
   constructor() {}
 

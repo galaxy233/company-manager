@@ -1,4 +1,4 @@
-<div class="company-details-contact">
+<div [ngClass]="{'selected':selected,'unselected':!selected}" class="company-details-contact">
   <fa [name]="'user'" [size]="2"></fa>
   <div>
     {{ contact.firstname }} {{ contact.LastName }}

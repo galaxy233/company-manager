@@ -8,6 +8,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class CompanySelectorItemComponent implements OnInit {
 
   @Input() company: object;
+  @Input() selected: boolean;
   @Output() onSelectCompany: EventEmitter<any> = new EventEmitter<any>();
 
   constructor() {}
