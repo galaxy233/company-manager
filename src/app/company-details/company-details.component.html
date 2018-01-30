@@ -29,10 +29,15 @@
             </div>
           </div>
 
-          <div class="company-details-buttons">
+          <div *ngIf="companyClone.CompanyID" class="company-details-buttons">
             <button class="green" (click)="update()">Save</button>
             <button class="yellow" (click)="cancel()">Cancel</button>
             <button class="red" (click)="delete()">Delete</button>
+          </div>
+
+          <div *ngIf="!companyClone.CompanyID" class="company-details-buttons">
+            <button class="green" (click)="create()">Create</button>
+            <button class="yellow" (click)="cancel()">Reset</button>
           </div>
 
         </div>
@@ -40,12 +45,15 @@
 
         <div class="company-details-contacts">
             <div *ngIf="companyClone.Contacts && companyClone.Contacts.length">
-              <h2>Contact List</h2>
+              <div class="company-details-contacts-header">
+                <h2>Contact List</h2>
+                <fa (click)="newContact()" [name]="'plus-circle'" [size]="2"></fa>
+              </div>
               <div *ngFor="let contact of companyClone.Contacts">
                 <app-company-details-contact [selected]="selectedContact ? selectedContact.ContactId === contact.ContactId : false" (click)="selectContact(contact)" [contact]="contact"></app-company-details-contact>
               </div>
             </div>
-            <fa (click)="newContact()" [name]="'plus-circle'" [size]="2"></fa>
+
         </div>
 
         <ng-template #contactFormTemplate>

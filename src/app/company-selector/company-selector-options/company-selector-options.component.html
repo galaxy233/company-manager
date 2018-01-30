@@ -1,4 +1,7 @@
 <div class="company-selector-options">
-  <h3>YOUR COMPANIES</h3>
+  <div class="company-selector-options-header">
+    <h3>COMPANIES</h3>
+    <fa (click)="newCompany()" [name]="'plus-circle'" [size]="2"></fa>
+  </div>
   <input #searchBox type="text" placeholder="Search for companies..." (keyup)="userSearch(searchBox.value)"/>
 </div>

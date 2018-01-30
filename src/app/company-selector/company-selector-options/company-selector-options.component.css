@@ -10,3 +10,18 @@
 .company-selector-options input {
   width: 250px;
 }
+
+.company-selector-options-header {
+  display: flex;
+  align-items: center;
+}
+
+.company-selector-options-header fa {
+  margin: 0px 10px;
+  color: #2D2F3C;
+}
+
+.company-selector-options-header fa:hover {
+  cursor: pointer;
+  color: #00A0ED;
+}

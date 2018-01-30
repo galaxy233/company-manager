@@ -1,11 +1,14 @@
 <div class="container">
   <div class="company-selector">
-    <app-company-selector-options (onUserSearch)="search($event)"></app-company-selector-options>
+    <app-company-selector-options
+      (onUserSearch)="search($event)"
+      (onNewCompany)="companyChange($event)">
+    </app-company-selector-options>
     <div *ngIf="filteredCompanies && filteredCompanies.length; else noResultsTemplate">
       <div class="company-selector-items">
         <div *ngFor="let company of filteredCompanies">
           <app-company-selector-item
-            (onSelectCompany)="onSelectedCompanyChange($event)"
+            (onSelectCompany)="companyChange($event)"
             [selected]="selectedCompany ? selectedCompany.CompanyID === company.CompanyID : false"
             [company]="company">
           </app-company-selector-item>

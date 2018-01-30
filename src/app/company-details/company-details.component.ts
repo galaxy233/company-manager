@@ -12,7 +12,6 @@ export class CompanyDetailsComponent implements OnChanges, OnInit {
 
   companyClone: Company;
   selectedContact: Contact;
-  newCompany: Company;
 
   @Input() company: Company;
   @Output() onDeleteRecord: EventEmitter<any> = new EventEmitter<any>();
@@ -79,8 +78,11 @@ export class CompanyDetailsComponent implements OnChanges, OnInit {
   }
 
   public create(): void {
-    this.telenotesService.updateRecord(this.newCompany)
+    this.companyClone.Contacts = [];
+    this.telenotesService.createRecord(this.companyClone)
       .subscribe(data => {
+        this.companyClone = new Company();
+        this.companyClone.Contacts = [];
         this.onUpdateRecord.emit();
       })
   }

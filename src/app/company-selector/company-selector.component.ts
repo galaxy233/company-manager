@@ -20,7 +20,7 @@ export class CompanySelectorComponent implements OnChanges {
     this.search(this.query);
   }
 
-  public onSelectedCompanyChange(company:Company) {
+  public companyChange(company:Company) {
     this.selectedCompany = company;
     this.selectedCompanyChange.emit(company);
   }

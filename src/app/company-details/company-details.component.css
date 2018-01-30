@@ -76,16 +76,6 @@ h2 {
   margin-bottom: 10px;
 }
 
-.company-details-contacts fa {
-  margin-top: 10px;
-  color: #2D2F3C;
-}
-.company-details-contacts fa:hover {
-  cursor: pointer;
-  color: #00A0ED;
-
-}
-
 .company-details-contact-detail > div {
   width: 300px;
   display: flex;
@@ -94,6 +84,25 @@ h2 {
 
 .company-details-contact-detail > div label {
   width: 150px;
+}
+
+.company-details-contacts-header {
+  display: flex;
+  align-items: center;
+}
+
+.company-details-contacts-header * {
+  margin: 0px;
+}
+
+.company-details-contacts-header fa {
+  margin-left: 10px;
+  color: #2D2F3C;
+}
+
+.company-details-contacts-header fa:hover {
+  cursor: pointer;
+  color: #00A0ED;
 }
 
 .company-details-buttons {
@@ -126,4 +135,20 @@ button {
   width: 100px;
   height: 35px;
   color: #2D2F3C;
+}
+
+@media (max-width: 768px) {
+  .company-details-main > div {
+    flex-direction: column;
+  }
+  .company-details-info {
+    height: auto;
+    flex-direction: column;
+  }
+  .company-details-info > div {
+    width: 100%;
+  }
+  .company-details-buttons {
+    margin: 10px 0px;
+  }
 }

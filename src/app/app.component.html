@@ -1,16 +1,8 @@
 <nav>
   <div>
-    DASHBOARD
+    COMPANY MANAGER
   </div>
 </nav>
-<div class="container">
-  <!-- <div class="summary">
-    <app-number-box [number]="10" [title]="'companies'"></app-number-box>
-    <app-number-box [number]="10" [title]="'companies'"></app-number-box>
-    <app-number-box [number]="102" [title]="'contacts'"></app-number-box>
-    <app-number-box [number]="102" [title]="'contacts'"></app-number-box>
-  </div> -->
-</div>
 <app-company-selector [companies]="companies" (selectedCompanyChange)="updateSelectedCompany($event)"></app-company-selector>
 <app-company-details
   (onDeleteRecord)="handleDeleteCompany()"
