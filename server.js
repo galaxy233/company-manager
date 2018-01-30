@@ -5,7 +5,7 @@ const cors = require('cors');
 
 const app = express();
 app.use(cors());
-app.use(express.static(path.join(__dirname, './public')));
+app.use(express.static(path.join(__dirname, './dist')));
 
 app.use('/api', proxy({
   target: 'http://devapp.telenotes.com',
@@ -17,4 +17,4 @@ app.use('/api', proxy({
   }
 }))
 
-app.listen(3000);
+app.listen(3001);
