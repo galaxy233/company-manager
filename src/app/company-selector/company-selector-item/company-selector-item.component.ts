@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Company } from '../../company';
 
 @Component({
   selector: 'app-company-selector-item',
@@ -7,7 +8,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class CompanySelectorItemComponent implements OnInit {
 
-  @Input() company: object;
+  @Input() company: Company;
   @Input() selected: boolean;
   @Output() onSelectCompany: EventEmitter<any> = new EventEmitter<any>();
 
@@ -16,7 +17,7 @@ export class CompanySelectorItemComponent implements OnInit {
   ngOnInit() {
   }
 
-  selectCompany(company: object) {
+  selectCompany(company: Company) {
     this.onSelectCompany.emit(company);
   }
 }
